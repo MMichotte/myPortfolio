@@ -1,0 +1,25 @@
+#contentCol {
+  
+
+  h1, h4, p, img {
+    margin-bottom: 20px;  
+    opacity: 0;
+  }
+
+  h1, img{
+    animation: fadein 1s ease-in forwards ;
+  }
+
+  h4, p {
+    animation: fadein 0.98s ease-in 0.2s forwards ;
+  }
+  
+  img {
+    max-width:80%;
+    max-height:80%;
+    width: auto;
+    height: auto;
+  }
+}
+
+
