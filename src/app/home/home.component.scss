@@ -1,4 +1,4 @@
-#contentCol {
+.contentCol {
   
 
   h1, h4, p, img {
@@ -14,7 +14,7 @@
     animation: fadein 0.98s ease-in 0.2s forwards ;
   }
   
-  img {
+  #imgMartin {
     max-width:80%;
     max-height:80%;
     width: auto;

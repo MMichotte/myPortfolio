@@ -1,5 +1,5 @@
 
-.contentCol {
+.contentCol, h1 {
     animation: fadein 1s ease-in forwards ;
     img{
         transition-duration: 0.5s;
@@ -9,8 +9,7 @@
     }
 
     img:hover {
-        width: 100px;
-        height: auto;
+        transform: scale(1.3);
     }
  
     .form-group {
@@ -38,6 +37,10 @@
     .icon {
         width: 100px;
         height: 100px;
+    }
+
+    .invalidField {
+        color: red !important;
     }
 
 }

@@ -17,13 +17,17 @@ export class ContactComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-      this.FormData = this.builder.group(
-        {
-          Fullname: new FormControl('', [Validators.required]),
-          Email: new FormControl('', [Validators.required, Validators.email]),
-          Comment: new FormControl('', [Validators.required])
-        })
+    this.FormData = this.builder.group(
+      {
+        Fullname: new FormControl('', [Validators.required]),
+        Email: new FormControl('', [Validators.required, Validators.email]),
+        Comment: new FormControl('', [Validators.required])
+      })
   }
+
+  get nameControl(): any {return this.FormData.get('Fullname');};
+  get emailControl(): any {return this.FormData.get('Email');};
+  get commentControl(): any {return this.FormData.get('Comment');};
 
   onSubmit(FormData) {
     this.contact.postMessage(FormData).subscribe(
