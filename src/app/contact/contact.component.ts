@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../services/contact.service';
 
@@ -8,7 +8,8 @@ import { ContactService } from '../services/contact.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-
+  @ViewChild('successMsg') successMsg: ElementRef;
+  
   FormData: FormGroup;
   
   constructor(
@@ -32,11 +33,16 @@ export class ContactComponent implements OnInit {
   onSubmit(FormData) {
     this.contact.postMessage(FormData).subscribe(
       response => {
-        console.log(response)
+        location.href = 'https://mailthis.to/confirm' //TODO virer cette merde
+        this.FormData.reset();
+        this.successMsg.nativeElement.style = 'display: block';
+        setTimeout(() => {
+          this.successMsg.nativeElement.style = 'display: none';
+        },5000);
       }, 
       error => {
         console.warn(error.responseText)
-        console.log({ error })
+        console.log({ error }) //TODO
     })
   }
   

@@ -21,7 +21,7 @@ export class ContactService {
             return response;
           }
         },
-        (error) => {
+        (error: any) => {
           return error;
         }
       )
