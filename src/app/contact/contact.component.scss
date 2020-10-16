@@ -1,6 +1,7 @@
 
 .contentCol, h1 {
     animation: fadein 1s ease-in forwards ;
+    
     img{
         transition-duration: 0.5s;
         display: inline-block;
@@ -51,5 +52,3 @@
         color: rgb(201, 200, 200) !important;
     }
 }
-
-
