@@ -2,6 +2,8 @@
 .contentCol, h1 {
     animation: fadein 1s ease-in forwards ;
     
+    
+
     img{
         transition-duration: 0.5s;
         display: inline-block;
@@ -28,7 +30,8 @@
     }
 
     .form-control {
-        min-width: 40vw;
+        min-width: 250px;
+        max-width: 450px;
     }
     .btn {
         min-width: 15vw;
@@ -51,4 +54,9 @@
     input, textarea {
         color: rgb(201, 200, 200) !important;
     }
+
+}
+
+h1 {
+    font-size: 50px;
 }

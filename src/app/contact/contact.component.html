@@ -5,7 +5,7 @@
         </div>
         <div class="row">
             <div class="col-sm contentCol">
-                <p>Through this form : </p>
+                <h4>Through this form : </h4>
                 <form [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)" autocomplete="off">
                     <div class="form-group">
                         <label for="Fullname">Full Name</label>
@@ -34,12 +34,12 @@
                         Message sent, thank you.
                       </div>
 
-                    <button type="submit" class="btn" [disabled]="!FormData.valid">Submit</button>
+                    <button type="submit" class="btn mb-4" [disabled]="!FormData.valid">Submit</button>
                 </form>
             </div>
 
             <div class="col-sm contentCol">
-                <p>Or find me on: </p>
+                <h4>Or find me on: </h4>
                 <div class="row justify-content-around my-2">
                     <div class="col-sm d-flex justify-content-center m-2">
                         <div class="icon">

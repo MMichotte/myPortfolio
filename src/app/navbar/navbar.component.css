@@ -1,4 +1,8 @@
 
+.navbar-nav a {
+    font-size: 1.3em;
+}
+
 .navbar-nav li a{
     color: white;
 }

@@ -1,17 +1,29 @@
 .contentCol {
   
 
-  h1, h4, p, img {
-    margin-bottom: 20px;  
+ h1, h4, img {
+    margin-bottom: 30px;  
     opacity: 0;
   }
 
-  h1, img{
+  img {
+    border-radius: 20px;
+  }
+
+  h4, img{
     animation: fadein 1s ease-in forwards ;
   }
 
-  h4, p {
+  #one {
     animation: fadein 0.98s ease-in 0.2s forwards ;
+    margin-bottom: 8px;
+  }
+  #two {
+    animation: fadein 0.98s ease-in 0.3s forwards ;
+    margin-bottom: 8px;
+  }
+  #three {
+    animation: fadein 0.98s ease-in 0.4s forwards ;
   }
   
   #imgMartin {
