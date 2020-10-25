@@ -1,4 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
 html, body {
     color: white;
     background-color: black;
@@ -38,3 +43,8 @@ html, body {
     display: flex;
     align-items: center;
 }
+
+.row{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
