@@ -11,19 +11,19 @@
   }
 
   h4, img{
-    animation: fadein 1s ease-in forwards ;
+    animation: fadein 1s ease-in forwards, translatein 1s ease-in forwards;
   }
 
   #one {
-    animation: fadein 0.98s ease-in 0.2s forwards ;
+    animation: fadein 0.98s ease-in 0.2s forwards, translatein 1s ease-in forwards ;
     margin-bottom: 8px;
   }
   #two {
-    animation: fadein 0.98s ease-in 0.3s forwards ;
+    animation: fadein 0.98s ease-in 0.3s forwards, translatein 1s ease-in forwards ;
     margin-bottom: 8px;
   }
   #three {
-    animation: fadein 0.98s ease-in 0.4s forwards ;
+    animation: fadein 0.98s ease-in 0.4s forwards, translatein 1s ease-in forwards ;
   }
   
   #imgMartin {

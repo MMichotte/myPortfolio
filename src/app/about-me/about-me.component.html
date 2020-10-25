@@ -1,18 +1,82 @@
 <div class="vertical-center">
     <div class="container">
         <div class="row d-flex justify-content-center">
-            <div class="col-sm">
-                <img id="i1" class="img-fluid circle" src="../../assets/img/profile.jpg" alt="">    
+            <div class="col-md" id="i1" data-toggle="modal" data-target="#me">
+                <img class="img-fluid circle" src="../../assets/img/profile.jpg" alt="Me">    
+                <span class="description">Me</span>
             </div>
-            <div class="col-sm">
-                <img id="i2" class="img-fluid circle" src="../../assets/img/Computer-Science.jpg" alt="">
+            <div class="col-md" id="i2" data-toggle="modal" data-target="#Computer-Science">
+                <img class="img-fluid circle" src="../../assets/img/Computer-Science.jpg" alt="Computer science">
+                <span class="description">Computer Scinece</span>
             </div>
-            <div class="col-sm">
-                <img id="i3" class="img-fluid circle" src="../../assets/img/Electromechanics.jpg" alt="">
+            <div class="col-md" id="i3" data-toggle="modal" data-target="#Electromechanics">
+                <img class="img-fluid circle" src="../../assets/img/Electromechanics.jpg" alt="Electromechanics">
+                <span class="description">Electromechanics</span>
             </div>
-            <div class="col-sm">
-                <img id="i4" class="img-fluid circle" src="../../assets/img/bike2.JPG" alt="">
+            <div class="col-md" id="i4" data-toggle="modal" data-target="#Other">
+                <img class="img-fluid circle" src="../../assets/img/bike2.JPG" alt="Other">
+                <span class="description">Other</span>
             </div>
         </div>
     </div>
 </div>
+
+
+<div class="modal fade" id="me" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Who am I ?</h2>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam illo maxime quod ab?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam illo maxime quod ab?</p>
+            <p>Discover more about my skills <a routerLink="/skills" data-dismiss="modal">here</a> or <a routerLink="/contact" data-dismiss="modal">contact</a> me.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+ 
+<div class="modal fade" id="Computer-Science" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Computer-Science</h2>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam illo maxime quod ab?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam illo maxime quod ab?</p>
+          </div>
+        </div>
+      </div>
+  </div>
+ 
+<div class="modal fade" id="Electromechanics" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Electromechanics</h2>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam illo maxime quod ab?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam illo maxime quod ab?</p>
+          </div>
+        </div>
+      </div>
+  </div>
+ 
+<div class="modal fade" id="Other" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title">Other</h2>
+          </div>
+          <div class="modal-body">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam illo maxime quod ab?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam illo maxime quod ab?</p>
+            <p> Discover more about my work <a routerLink="/work" data-dismiss="modal">here</a>.</p>
+        </div>
+        </div>
+      </div>
+  </div>
+ 
