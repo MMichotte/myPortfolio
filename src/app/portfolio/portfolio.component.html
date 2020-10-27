@@ -1,1 +1,247 @@
-<p>portfolio works!</p>
+<div class="vertical-center">
+    <div class="container">
+
+        <div class="row flex-parent">
+            <div class="flex-child" data-toggle="modal" data-target="#Angular">
+                <img src="../../assets/img/portfolio/angular.png" alt="Angular icon">
+                <span class="description">
+                    <p>Angular</p>
+                    <p class="sm">Online Course</p>
+                </span>
+            </div>
+            <div class="flex-child" data-toggle="modal" data-target="#Node">
+                <img src="../../assets/img/portfolio/nodejs.png" alt="nodeJs icon">
+                <span class="description">
+                    <p>NodeJs</p>
+                    <p class="sm">Online Course</p>
+                </span>
+            </div>
+            <div class="flex-child" data-toggle="modal" data-target="#Scouts">
+                <img src="../../assets/img/portfolio/Scouts.png" alt="Scouts icon">
+                <span class="description">Scouts Leader</span>
+            </div>
+        </div>
+
+        <div class="row flex-parent">
+            <div class="flex-child" data-toggle="modal" data-target="#SlgApp">
+                <img src="../../assets/img/portfolio/SlgAppLogo.png" alt="SlgApp icon">
+                <span class="description">Native Application</span>
+            </div>
+            <div class="flex-child" data-toggle="modal" data-target="#None//TODO">
+                <img src="../../assets/img/portfolio/def.png" alt="Angular icon">
+                <span class="description">//TODO</span>
+            </div>
+            <div class="flex-child" data-toggle="modal" data-target="#None//TODO">
+                <img src="../../assets/img/portfolio/def.png" alt="Angular icon">
+                <span class="description">//TODO</span>
+            </div>
+        </div>
+
+        <div class="row flex-parent">
+            <div>Click <span class="clickHere" data-toggle="modal" data-target="#hoursTable">here</span> to see
+                the hour table</div>
+        </div>
+    </div>
+
+</div>
+
+<!--------------------------------->
+
+<div class="proof " id="AngularProof" (click)="hideProof('Ang')">
+    <img 
+        src="../../assets/img/portfolio/proofs/AngularProof.png" 
+        alt="Angular online course proof" 
+    >
+</div>
+<div class="proof " id="NodeProof" (click)="hideProof('Node')">
+    <img 
+        src="../../assets/img/portfolio/proofs/def.png" 
+        alt="NodeJs online course proof" 
+    >
+</div>
+<div class="proof " id="ScoutsProof">
+    <img 
+        src="../../assets/img/portfolio/proofs/scouts/{{slideN}}.gif" 
+        alt="Angular online course proof" 
+        class="mySlides"
+        (click)="hideProof('Scouts')"
+    >
+    <button class="btn btnImg-left" (click)="nextIm(-1,3)">&#10094;</button>
+    <button class="btn btnImg-right" (click)="nextIm(+1,3)">&#10095;</button>
+</div>
+
+<div class="proof " id="SlgProof">
+    <img 
+        src="../../assets/img/portfolio/proofs/slgApp/{{slideN}}.PNG" 
+        alt="Angular online course proof" 
+        class="mySlides"
+        (click)="hideProof('SlgApp')"
+    >
+    <button class="btn btnImg-left" (click)="nextIm(-1,3)">&#10094;</button>
+    <button class="btn btnImg-right" (click)="nextIm(+1,3)">&#10095;</button>
+</div>
+
+<!--------------------------------->
+
+<div class="modal fade" id="Angular" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Angular</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
+                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
+                    illo maxime quod ab?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
+                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
+                    illo maxime quod ab?</p>
+                <div>Click <span class="clickHere" (click)="displayProof('Ang')" data-toggle="modal" data-target="#Angular">here</span> to see the proof.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="Node" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">NodeJs</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
+                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
+                    illo maxime quod ab?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
+                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
+                    illo maxime quod ab?</p>
+                <div>Click <span class="clickHere" (click)="displayProof('Node')" data-toggle="modal" data-target="#Node">here</span> to see the proof.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Scouts" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Scouts Leader</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
+                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
+                    illo maxime quod ab?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
+                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
+                    illo maxime quod ab?</p>
+                <div>Click <span class="clickHere" (click)="displayProof('Scouts')" data-toggle="modal" data-target="#Scouts">here</span> to see the proof.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="SlgApp" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">SLG Order Manager App</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
+                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
+                    illo maxime quod ab?</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
+                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
+                    illo maxime quod ab?</p>
+                <div>Click <span class="clickHere" (click)="displayProof('SlgApp')" data-toggle="modal" data-target="#SlgApp">here</span> to see the proof.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--------------------------------->
+
+
+<div class="modal fade" id="hoursTable" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Hours Table</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Subject</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Hours</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Angular</td>
+                            <td>Online Course</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>NodeJs</td>
+                            <td>Online Course</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Scouts</td>
+                            <td>Team Leadership</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>SLG App</td>
+                            <td>Native app development</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">5</th>
+                            <td>TODO</td>
+                            <td>TODO</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">6</th>
+                            <td>TODO</td>
+                            <td>TODO</td>
+                            <td>10</td>
+                        </tr>
+                        <tr>
+                            <th scope="row"></th>
+                            <td></td>
+                            <td id="totalHours">Total :</td>
+                            <td>60</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

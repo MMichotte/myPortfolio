@@ -8,10 +8,10 @@
 }
 
 .navbar-nav li a:hover{
-    color: #f0860c;
+    color: var(--myOrange);
 }
 
 .navbar-nav > .active > a, .navbar-default .navbar-nav > .active >
         a:hover, .navbar-default .navbar-nav > .active > a:focus {
-color: #f0860c;
+    color: var(--myOrange);
 }
