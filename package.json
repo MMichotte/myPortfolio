@@ -25,7 +25,6 @@
     "@angular/platform-browser": "~9.0.1",
     "@angular/platform-browser-dynamic": "~9.0.1",
     "@angular/router": "~9.0.1",
-    "@types/jquery": "^3.5.3",
     "bootstrap": "^4.5.2",
     "express": "^4.17.1",
     "jquery": "^3.5.1",
@@ -37,12 +36,13 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^0.1001.6",
+    "@angular-devkit/build-angular": "^0.1002.0",
     "@angular/cli": "~9.0.2",
     "@angular/compiler-cli": "^9.0.7",
     "@angular/language-service": "~9.0.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/jquery": "^3.5.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
     "enhanced-resolve": "^3.3.0",
