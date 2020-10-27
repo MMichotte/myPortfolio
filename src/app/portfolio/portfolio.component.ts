@@ -30,6 +30,9 @@ export class PortfolioComponent implements OnInit {
     if (p == 'SlgApp'){
       document.getElementById("SlgProof").style.display="block";
     }
+    if (p == 'Game'){
+      document.getElementById("GameProof").style.display="block";
+    }
   }
 
   hideProof(p:String){
@@ -44,6 +47,9 @@ export class PortfolioComponent implements OnInit {
     }
     if (p == 'SlgApp'){
       document.getElementById("SlgProof").style.display="none";
+    }
+    if (p == 'Game'){
+      document.getElementById("GameProof").style.display="none";
     }
   }
 
