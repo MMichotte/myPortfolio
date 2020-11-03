@@ -25,7 +25,7 @@
         <div class="row flex-parent">
             <div class="flex-child" data-toggle="modal" data-target="#SlgApp">
                 <img src="../../assets/img/portfolio/SlgAppLogo.png" alt="SlgApp icon">
-                <span class="description">Native Application</span>
+                <span class="description">Native Application Maintenance</span>
             </div>
             <div class="flex-child" data-toggle="modal" data-target="#Game">
                 <img src="../../assets/img/portfolio/rushHour.png" alt="Angular icon">
@@ -51,44 +51,27 @@
 <!--------------------------------->
 
 <div class="proof " id="AngularProof" (click)="hideProof('Ang')">
-    <img 
-        src="../../assets/img/portfolio/proofs/AngularProof.png" 
-        alt="Angular online course proof" 
-    >
+    <img src="../../assets/img/portfolio/proofs/AngularProof.png" alt="Angular online course proof">
 </div>
 <div class="proof " id="NodeProof" (click)="hideProof('Node')">
-    <img 
-        src="../../assets/img/portfolio/proofs/def.png" 
-        alt="NodeJs online course proof" 
-    >
+    <img src="../../assets/img/portfolio/proofs/def.png" alt="NodeJs online course proof">
 </div>
 <div class="proof " id="ScoutsProof">
-    <img 
-        src="../../assets/img/portfolio/proofs/scouts/{{slideN}}.gif" 
-        alt="Scouts proof" 
-        class="mySlides"
-        (click)="hideProof('Scouts')"
-    >
+    <img src="../../assets/img/portfolio/proofs/scouts/{{slideN}}.gif" alt="Scouts proof" class="mySlides"
+        (click)="hideProof('Scouts')">
     <button class="btn btnImg-left" (click)="nextIm(-1,2)">&#10094;</button>
     <button class="btn btnImg-right" (click)="nextIm(+1,2)">&#10095;</button>
 </div>
 
 <div class="proof " id="SlgProof">
-    <img 
-        src="../../assets/img/portfolio/proofs/slgApp/{{slideN}}.PNG" 
-        alt="Slg App proof" 
-        class="mySlides"
-        (click)="hideProof('SlgApp')"
-    >
+    <img src="../../assets/img/portfolio/proofs/slgApp/{{slideN}}.PNG" alt="Slg App proof" class="mySlides"
+        (click)="hideProof('SlgApp')">
     <button class="btn btnImg-left" (click)="nextIm(-1,3)">&#10094;</button>
     <button class="btn btnImg-right" (click)="nextIm(+1,3)">&#10095;</button>
 </div>
 
 <div class="proof " id="GameProof" (click)="hideProof('Game')">
-    <img 
-        src="../../assets/img/portfolio/proofs/rushHour.gif" 
-        alt="Python game proof" 
-    >
+    <img src="../../assets/img/portfolio/proofs/rushHour.gif" alt="Python game proof">
 </div>
 
 <!--------------------------------->
@@ -103,13 +86,18 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <div>Click <span class="clickHere" (click)="displayProof('Ang')" data-toggle="modal" data-target="#Angular">here</span> to see the proof.</div>
+                <p>Last year (2019-2020), during my studies, we had to build a complete web-app from scratch and as a
+                    group we decided to implement our front-end using the React framework. Even though I liked it a lot,
+                    this year I decided not to deepen my knowledge in React and instead learn a new front-end framework
+                    : Angular.</p>
+                <p>I started a online course on <a href="https://openclassrooms.com">OpenClassRooms</a> and finished it
+                    in no more than a few days. I really enjoyed it and I have to say that I actually prefer Angular
+                    over React!</p>
+                <p>This course was not only very interesting, but very usefully since my it is a required knowledge for
+                    my upcoming internship </p>
+                <p>As a side note, this website was made with Angular!</p>
+                <div>Click <span class="clickHere" (click)="displayProof('Ang')" data-toggle="modal"
+                        data-target="#Angular">here</span> to see the proof.</div>
             </div>
         </div>
     </div>
@@ -120,19 +108,23 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title">NodeJs</h2>
+                <h2 class="modal-title">NodeJs & Express</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <div>Click <span class="clickHere" (click)="displayProof('Node')" data-toggle="modal" data-target="#Node">here</span> to see the proof.</div>
+                <p>Similarly as what I said in the Angular information, during last year's project, we used Django as a
+                    back-end framework. And yet again, instead of deepening my knowledge in Django, I decided to learn
+                    one of the most used back-end "frameworks" : NodeJs and Express.</p>
+                <p>I started a online course on <a href="https://openclassrooms.com">OpenClassRooms</a> and finished the
+                    basics in a few days.
+                    The rest of the course took me more time to complete since it was a more "hands-on" part and I
+                    didn"t have a lot of time.</p>
+                <p>Django and NodeJs are really different and I enjoy each of them with a slight preference for NodeJs
+                    mainly because of it's ease of use.</p>
+                <div>Click <span class="clickHere" (click)="displayProof('Node')" data-toggle="modal"
+                        data-target="#Node">here</span> to see the proof.</div>
             </div>
         </div>
     </div>
@@ -148,13 +140,18 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <div>Click <span class="clickHere" (click)="displayProof('Scouts')" data-toggle="modal" data-target="#Scouts">here</span> to see the proof.</div>
+                <p>Scouting is a big part of my life, I have been in the <a href="https://www.scouts-europe.be">European
+                        Scouts</a> since I was 5 years old and never skipped a year since then! I went from the "wolf
+                    cubs" to "scout" to "scout Assistant-Chief " to "scout Head-Chief" and finally to "Unit-Chief".
+                    Even though I don't lead the scouts anymore, as a "Unit-Chief" I help the Head-Chiefs from all over
+                    Wallonia.
+                </p>
+                <p>
+                    Even though this year is a bit particular with the Covid-pandemic, I still managed to organise some
+                    activities such as the welcoming of al the new Chiefs-to-be, where we built a tree-climbing course.
+                </p>
+                <div>Click <span class="clickHere" (click)="displayProof('Scouts')" data-toggle="modal"
+                        data-target="#Scouts">here</span> to see the proof.</div>
             </div>
         </div>
     </div>
@@ -170,14 +167,19 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <div>Click <span class="clickHere" (click)="displayProof('SlgApp')" data-toggle="modal" data-target="#SlgApp">here</span> to see the proof
-                     or check out the <a class="clickHere" href="https://github.com/MMichotte/SLG-Order-Manager" target="_blank">GitHub</a> repository.</div>
+                <p>A few years ago I built a desktop application for a small company named <a
+                        href="https://www.slgcars.be">SLG Classic Cars</a>. The application was designed to help them
+                    create and receive orders to and from their suppliers.</p>
+                <p>I build this application when I didn't have a lot of programming knowledge. It's therefore far from
+                    optimized and contains a lot of bugs. During the last 2 years, I spent at least three to four full
+                    days on site to solve these bugs.
+                </p>
+                <div>Click <span class="clickHere" (click)="displayProof('SlgApp')" data-toggle="modal"
+                        data-target="#SlgApp">here</span> to see the actual app
+                    or check out the <a class="clickHere" href="https://github.com/MMichotte/SLG-Order-Manager"
+                        target="_blank">GitHub</a> repository.
+                    (Note that the code wasn't on Github before recently). For more information, feel free to contact me
+                    or the company. (be sure to mention my name)</div>
             </div>
         </div>
     </div>
@@ -193,14 +195,23 @@
                 </button>
             </div>
             <div class="modal-body">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates delectus repellendus laborum
-                    ullam magni libero quibusdam eveniet? Cum est facere molestiae quia nemo quidem, tenetur quibusdam
-                    illo maxime quod ab?</p>
-                <div>Click <span class="clickHere" (click)="displayProof('Game')" data-toggle="modal" data-target="#Game">here</span> to see the proof
-                     or check out the <a class="clickHere" href="https://github.com/MMichotte/RushHour_game" target="_blank">GitHub</a> repository.</div>
+                <p>During the first few months of this year, a friend of mine asked me to debug a game he made a few
+                    years ago.
+                    I quickly realized that his code was very badly organized and that understanding his code and
+                    refactoring it
+                    would take me way too much time. Therefore, I decided to "quickly" implement a simple game using a
+                    MVC-architecture
+                    in order to explain to him how things go together and how he should be refactoring his game.
+                </p>
+                <p>After a bit of thinkering, I decided to implement the famous <a
+                        href="https://en.wikipedia.org/wiki/Rush_Hour_(puzzle)">Rush Hour</a>
+                    game in Python. It wasn't without a challenge but I ended up implementing a solid, functional
+                    base-game.
+                    Anyone can very easelly add more levels and submit me a pull-request on GitHub!</p>
+                <div>Click <span class="clickHere" (click)="displayProof('Game')" data-toggle="modal"
+                        data-target="#Game">here</span> to see the proof
+                    or check out the <a class="clickHere" href="https://github.com/MMichotte/RushHour_game"
+                        target="_blank">GitHub</a> repository.</div>
             </div>
         </div>
     </div>
@@ -250,7 +261,7 @@
                         <tr>
                             <th scope="row">4</th>
                             <td>SLG App</td>
-                            <td>Native app development</td>
+                            <td>Native app maintenance</td>
                             <td>10</td>
                         </tr>
                         <tr>
