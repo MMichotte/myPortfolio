@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import * as $ from 'jquery';
 
 
 @Component({
@@ -9,48 +8,29 @@ import * as $ from 'jquery';
 })
 export class PortfolioComponent implements OnInit {
 
+  title: String = '';
+  descriptionBody: String = '';
+
+  modals: any[] = [];
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  slideN:number = 0;
-
-  displayProof(p:String){
-    this.slideN = 0;
-    if (p == 'Ang'){
-      document.getElementById("AngularProof").style.display="block";
-    }
-    if (p == 'Node'){
-      document.getElementById("NodeProof").style.display="block";
-    }
-    if (p == 'Scouts'){
-      document.getElementById("ScoutsProof").style.display="block";
-    }
-    if (p == 'SlgApp'){
-      document.getElementById("SlgProof").style.display="block";
-    }
-    if (p == 'Game'){
-      document.getElementById("GameProof").style.display="block";
-    }
+  addModal(m: any) {
+    this.modals.push(m);
   }
 
-  hideProof(p:String){
-    if (p == 'Ang'){
-      document.getElementById("AngularProof").style.display="none";
-    }
-    if (p == 'Node'){
-      document.getElementById("NodeProof").style.display="none";
-    }
-    if (p == 'Scouts'){
-      document.getElementById("ScoutsProof").style.display="none";
-    }
-    if (p == 'SlgApp'){
-      document.getElementById("SlgProof").style.display="none";
-    }
-    if (p == 'Game'){
-      document.getElementById("GameProof").style.display="none";
-    }
+  slideN:number = 0;
+
+  displayProof(id:string){
+    this.slideN = 0;
+    document.getElementById(id).style.display="block";
+  }
+
+  hideProof(id:string){
+    document.getElementById(id).style.display="none";
   }
 
   nextIm(n:number, imgs:number){

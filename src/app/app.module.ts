@@ -1,3 +1,5 @@
+import { ActivityComponent } from './portfolio/activity/activity.component';
+import { HoursTableComponent } from './portfolio/hours-table/hours-table.component';
 import { ContactService } from './services/contact.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +16,6 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HoursTableComponent } from './portfolio/hours-table/hours-table.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { HoursTableComponent } from './portfolio/hours-table/hours-table.compone
     PortfolioComponent,
     ContactComponent,
     HoursTableComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,
