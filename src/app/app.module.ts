@@ -1,3 +1,5 @@
+import { ActivityComponent } from './portfolio/activity/activity.component';
+import { HoursTableComponent } from './portfolio/hours-table/hours-table.component';
 import { ContactService } from './services/contact.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -26,6 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SkillsComponent,
     PortfolioComponent,
     ContactComponent,
+    HoursTableComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,
