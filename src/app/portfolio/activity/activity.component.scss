@@ -1,0 +1,91 @@
+.flex-child{
+    margin: 30px 50px;
+    position: relative;
+
+    img{
+        transition: all .3s ease-in-out;
+        width: 200px;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .description {
+        position: absolute;
+        width: 80%;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: xx-large;
+        opacity: 0;
+
+        .sm{
+            font-size: large;
+            text-align: center;
+        }
+    }
+
+
+    &:hover{
+        .description{
+            animation: fadein 0.5s ease-in forwards;
+            opacity: 1;
+        }
+        img{
+            transform: scale(1.3);
+            opacity: 20%;
+            background-color: rgba(75,75,75,1);
+            transition: all .3s ease-in-out;
+        }
+        .description, img{
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+.proof{
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    align-content: center;
+
+    img{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .btn{
+        position: absolute;
+        bottom: 5%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: white;
+
+        &:hover{
+            background-color: var(--myOrange);
+        }
+    }
+
+    .btnImg-left{
+        left: 45%;
+        transform: translate(-45%, 5%);
+    }
+
+    .btnImg-right{
+        left: 55%;
+        transform: translate(-55%, 5%);
+    }
+}

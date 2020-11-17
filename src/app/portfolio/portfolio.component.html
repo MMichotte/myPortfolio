@@ -1,6 +1,30 @@
 <div class="vertical-center">
     <div class="container">
-
+        <div class="row flex-parent">
+            <app-activity 
+                coverImg="../../assets/img/portfolio/angular.png" 
+                imgAlt="Angular icon" 
+                title="Angular" 
+                subTitle="Online Course" 
+                descriptionBody = "
+                    <p>Last year (2019-2020), during my studies, we had to build a complete web-app from scratch and as a
+                        group we decided to implement our front-end using the React framework. Even though I liked it a lot,
+                        this year I decided not to deepen my knowledge in React and instead learn a new front-end framework
+                        : Angular.</p>
+                    <p>I started an online course on <a href='https://openclassrooms.com' target='_blank'>OpenClassRooms</a>
+                        and finished it
+                        in no more than a few days. I really enjoyed it and I have to say that I actually prefer Angular
+                        over React!</p>
+                    <p>This course was not only very interesting, but very usefully since it's a required knowledge for
+                        my upcoming internship </p>
+                    <p>As a side note, this website was made with Angular!</p>
+                "
+                proofDir="../../assets/img/portfolio/proofs/"
+                proofAlt="Angular online course proof"
+                (newModalEvent)="addModal($event)"
+            ></app-activity>
+        </div>
+        <!--
         <div class="row flex-parent">
             <div class="flex-child" data-toggle="modal" data-target="#Angular">
                 <img src="../../assets/img/portfolio/angular.png" alt="Angular icon">
@@ -59,14 +83,37 @@
                 </span>
             </div>
         </div>
-
+        -->
         <app-hours-table></app-hours-table>
 
     </div>
 
 </div>
 
-<!--------------------------------->
+<div *ngFor="let modal of modals">
+    <div class="modal fade" id={{modal.id}} tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">{{modal.title}}</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div [innerHTML]="modal.content"></div>
+                    <h5>Proof :</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!---------------------------------
 
 <div class="proof " id="AngularProof" (click)="hideProof('Ang')">
     <img src="../../assets/img/portfolio/proofs/AngularProof.png" alt="Angular online course proof">
@@ -92,7 +139,7 @@
     <img src="../../assets/img/portfolio/proofs/rushHour.gif" alt="Python game proof">
 </div>
 
-<!--------------------------------->
+<!---------------------------------
 
 <div class="modal fade" id="Angular" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -243,3 +290,4 @@
         </div>
     </div>
 </div>
+-->
