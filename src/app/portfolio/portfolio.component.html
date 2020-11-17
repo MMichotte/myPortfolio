@@ -1,299 +1,239 @@
 <div class="vertical-center">
     <div class="container">
+        <div class="row flex-parent">
+            <app-activity 
+                title="Angular" 
+                subTitle="Online Course" 
+                coverImg="../../assets/img/portfolio/angular.png" 
+                imgAlt="Angular icon" 
+                descriptionBody = "
+                    <p>Last year (2019-2020), during my studies, we had to build a complete web-app from scratch and as a
+                        group we decided to implement our front-end using the React framework. Even though I liked it a lot,
+                        this year I decided not to deepen my knowledge in React and instead learn a new front-end framework
+                        : Angular.</p>
+                    <p>I started an online course on <a href='https://openclassrooms.com' target='_blank'>OpenClassRooms</a>
+                        and finished it
+                        in no more than a few days. I really enjoyed it and I have to say that I actually prefer Angular
+                        over React!</p>
+                    <p>This course was not only very interesting, but very usefully since it's a required knowledge for
+                        my upcoming internship </p>
+                    <p>As a side note, this website was made with Angular!</p>
+                "
+                proofDir="../../assets/img/portfolio/proofs/angular/"
+                proofQuant=1
+                proofExtension=".png"
+                proofAlt="Angular online course proof"
+                proofText="to see the proof."
+                (newModalEvent)="addModal($event)"
+            ></app-activity>
+
+            <app-activity 
+                title="NodeJs & Express" 
+                subTitle="Online Course" 
+                coverImg="../../assets/img/portfolio/nodejs.png" 
+                imgAlt="nodeJs icon" 
+                descriptionBody = "
+                    <p>Similarly as what I said in the Angular information, during last year's project, we used Django as a
+                        back-end framework. And yet again, instead of deepening my knowledge in Django, I decided to learn
+                        one of the most used back-end 'frameworks' : NodeJs and Express.</p>
+                    <p>I started an online course on <a href='https://openclassrooms.com' target='_blank'>OpenClassRooms</a>
+                        and finished the
+                        basics in a few days.
+                        The rest of the course took me more time to complete since it was a more 'hands-on' part and I
+                        didn't have a lot of time.</p>
+                    <p>Django and NodeJs are really different and I enjoy each of them with a slight preference for NodeJs
+                        mainly because of it's ease of use.</p>
+                "
+                proofDir="../../assets/img/portfolio/proofs/nodeJs/"
+                proofQuant=1
+                proofExtension=".png"
+                proofAlt="NodeJs online course proof"
+                proofText="to see the proof."
+                (newModalEvent)="addModal($event)"
+            ></app-activity>
+
+            <app-activity 
+                title="Scouts Leader" 
+                subTitle="" 
+                coverImg="../../assets/img/portfolio/Scouts.png" 
+                imgAlt="Scouts icon" 
+                descriptionBody = "
+                    <p>Scouting is a big part of my life, I have been in the <a href='https://www.scouts-europe.be'
+                        target='_blank'>European
+                        Scouts</a> since I was 5 years old and never skipped a year since then! I went from the 'wolf
+                        cubs' to 'scout' to 'scout Assistant-Chief' to 'scout Head-Chief' and finally to 'Unit-Chief'.
+                        Even though I don't lead the scouts anymore, as a 'Unit-Chief' I help the Head-Chiefs from all over
+                        Wallonia.
+                    </p>
+                    <p>
+                        Even though this year is a bit particular with the Covid-pandemic, I still managed to organise some
+                        activities such as the welcoming of al the new Chiefs-to-be, where we built a tree-climbing course.
+                    </p>
+                "
+                proofDir="../../assets/img/portfolio/proofs/scouts/"
+                proofQuant=2
+                proofExtension=".gif"
+                proofAlt="Scouts proof"
+                proofText="to see the proof."
+                (newModalEvent)="addModal($event)"
+            ></app-activity>
+
+        </div>
 
         <div class="row flex-parent">
-            <div class="flex-child" data-toggle="modal" data-target="#Angular">
-                <img src="../../assets/img/portfolio/angular.png" alt="Angular icon">
-                <span class="description">
-                    <p>Angular</p>
-                    <p class="sm">Online Course</p>
-                </span>
-            </div>
-            <div class="flex-child" data-toggle="modal" data-target="#Node">
-                <img src="../../assets/img/portfolio/nodejs.png" alt="nodeJs icon">
-                <span class="description">
-                    <p>NodeJs</p>
-                    <p class="sm">Online Course</p>
-                </span>
-            </div>
-            <div class="flex-child" data-toggle="modal" data-target="#Scouts">
-                <img src="../../assets/img/portfolio/Scouts.png" alt="Scouts icon">
-                <span class="description">Scouts Leader</span>
-            </div>
-        </div>
-
-        <div class="row flex-parent">
-            <div class="flex-child" data-toggle="modal" data-target="#SlgApp">
-                <img src="../../assets/img/portfolio/SlgAppLogo.png" alt="SlgApp icon">
-                <span class="description">Native Application Maintenance</span>
-            </div>
-            <div class="flex-child" data-toggle="modal" data-target="#Game">
-                <img src="../../assets/img/portfolio/rushHour.png" alt="Angular icon">
-                <span class="description">
-                    <p>Rush Hour</p>
-                    <p class="sm">python game</p>
-                </span>
-            </div>
-            <div class="flex-child" data-toggle="modal" data-target="#None//TODO">
-                <img src="../../assets/img/portfolio/def.png" alt="Angular icon">
-                <span class="description">//TODO</span>
-            </div>
-        </div>
-
-        <div class="row flex-parent">
-            <div>Click <span class="clickHere" data-toggle="modal" data-target="#hoursTable">here</span> to see
-                the hour table</div>
-        </div>
-    </div>
-
-</div>
-
-<!--------------------------------->
-
-<div class="proof " id="AngularProof" (click)="hideProof('Ang')">
-    <img src="../../assets/img/portfolio/proofs/AngularProof.png" alt="Angular online course proof">
-</div>
-<div class="proof " id="NodeProof" (click)="hideProof('Node')">
-    <img src="../../assets/img/portfolio/proofs/NodeJsProof.png" alt="NodeJs online course proof">
-</div>
-<div class="proof " id="ScoutsProof">
-    <img src="../../assets/img/portfolio/proofs/scouts/{{slideN}}.gif" alt="Scouts proof" class="mySlides"
-        (click)="hideProof('Scouts')">
-    <button class="btn btnImg-left" (click)="nextIm(-1,2)">&#10094;</button>
-    <button class="btn btnImg-right" (click)="nextIm(+1,2)">&#10095;</button>
-</div>
-
-<div class="proof " id="SlgProof">
-    <img src="../../assets/img/portfolio/proofs/slgApp/{{slideN}}.PNG" alt="Slg App proof" class="mySlides"
-        (click)="hideProof('SlgApp')">
-    <button class="btn btnImg-left" (click)="nextIm(-1,3)">&#10094;</button>
-    <button class="btn btnImg-right" (click)="nextIm(+1,3)">&#10095;</button>
-</div>
-
-<div class="proof " id="GameProof" (click)="hideProof('Game')">
-    <img src="../../assets/img/portfolio/proofs/rushHour.gif" alt="Python game proof">
-</div>
-
-<!--------------------------------->
-
-<div class="modal fade" id="Angular" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Angular</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Last year (2019-2020), during my studies, we had to build a complete web-app from scratch and as a
-                    group we decided to implement our front-end using the React framework. Even though I liked it a lot,
-                    this year I decided not to deepen my knowledge in React and instead learn a new front-end framework
-                    : Angular.</p>
-                <p>I started an online course on <a href="https://openclassrooms.com" target="_blank">OpenClassRooms</a>
-                    and finished it
-                    in no more than a few days. I really enjoyed it and I have to say that I actually prefer Angular
-                    over React!</p>
-                <p>This course was not only very interesting, but very usefully since it's a required knowledge for
-                    my upcoming internship </p>
-                <p>As a side note, this website was made with Angular!</p>
-                <h5>Proof :</h5>
-                <div>Click <span class="clickHere" (click)="displayProof('Ang')" data-toggle="modal"
-                        data-target="#Angular">here</span> to see the proof.</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<div class="modal fade" id="Node" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">NodeJs & Express</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Similarly as what I said in the Angular information, during last year's project, we used Django as a
-                    back-end framework. And yet again, instead of deepening my knowledge in Django, I decided to learn
-                    one of the most used back-end "frameworks" : NodeJs and Express.</p>
-                <p>I started an online course on <a href="https://openclassrooms.com" target="_blank">OpenClassRooms</a>
-                    and finished the
-                    basics in a few days.
-                    The rest of the course took me more time to complete since it was a more "hands-on" part and I
-                    didn"t have a lot of time.</p>
-                <p>Django and NodeJs are really different and I enjoy each of them with a slight preference for NodeJs
-                    mainly because of it's ease of use.</p>
-                <h5>Proof :</h5>
-                <div>Click <span class="clickHere" (click)="displayProof('Node')" data-toggle="modal"
-                        data-target="#Node">here</span> to see the proof.</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="Scouts" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Scouts Leader</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>Scouting is a big part of my life, I have been in the <a href="https://www.scouts-europe.be"
-                        target="_blank">European
-                        Scouts</a> since I was 5 years old and never skipped a year since then! I went from the "wolf
-                    cubs" to "scout" to "scout Assistant-Chief " to "scout Head-Chief" and finally to "Unit-Chief".
-                    Even though I don't lead the scouts anymore, as a "Unit-Chief" I help the Head-Chiefs from all over
-                    Wallonia.
-                </p>
-                <p>
-                    Even though this year is a bit particular with the Covid-pandemic, I still managed to organise some
-                    activities such as the welcoming of al the new Chiefs-to-be, where we built a tree-climbing course.
-                </p>
-                <h5>Proof :</h5>
-                <div>Click <span class="clickHere" (click)="displayProof('Scouts')" data-toggle="modal"
-                        data-target="#Scouts">here</span> to see the proof.</div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="modal fade" id="SlgApp" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">SLG Order Manager App</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>A few years ago I built a desktop application for a small company named <a
-                        href="https://www.slgcars.be" target="_blank">SLG Classic Cars</a>. The application was designed
+            <app-activity 
+                title="Native Application Maintenance" 
+                subTitle="" 
+                coverImg="../../assets/img/portfolio/SlgAppLogo.png" 
+                imgAlt="SlgApp icon" 
+                descriptionBody = "
+                    <p>A few years ago I built a desktop application for a small company named <a
+                        href='https://www.slgcars.be' target='_blank'>SLG Classic Cars</a>. The application was designed
                     to help them
                     create and receive orders to and from their suppliers.</p>
-                <p>I build this application when I didn't have a lot of programming knowledge. It's therefore far from
-                    optimized and contains a lot of bugs. During the last 2 years, I spent at least three to four full
-                    days on site to solve these bugs.
-                </p>
-                <h5>Proof :</h5>
-                <div>Click <span class="clickHere" (click)="displayProof('SlgApp')" data-toggle="modal"
-                        data-target="#SlgApp">here</span> to see the actual app
-                    or check out the <a class="clickHere" href="https://github.com/MMichotte/SLG-Order-Manager"
-                        target="_blank">GitHub</a> repository.
-                    (Note that the code wasn't on Github before recently). For more information, feel free to contact me
-                    or the company. (be sure to mention my name)</div>
+                    <p>I build this application when I didn't have a lot of programming knowledge. It's therefore far from
+                        optimized and contains a lot of bugs. During the last 2 years, I spent at least three to four full
+                        days on site to solve these bugs.
+                    </p>
+                "
+                proofDir="../../assets/img/portfolio/proofs/slgApp/"
+                proofQuant=3
+                proofExtension=".PNG"
+                proofAlt="Slg App proof"
+                proofText="
+                    to see the actual app or check out the <a class='clickHere' href='https://github.com/MMichotte/SLG-Order-Manager' target='_blank'>GitHub</a> repository.
+                    (Note that the code wasn't on Github before recently).
+                    <br> For more information, feel free to contact me
+                    or the company. (be sure to mention my name)
+                "
+                (newModalEvent)="addModal($event)"
+            ></app-activity>
+
+            <app-activity 
+                title="Rush Hour" 
+                subTitle="python game" 
+                coverImg="../../assets/img/portfolio/rushHour.png" 
+                imgAlt="RushHour icon" 
+                descriptionBody = "
+                    <p>A few years ago I built a desktop application for a small company named <a
+                        href='https://www.slgcars.be' target='_blank'>SLG Classic Cars</a>. The application was designed
+                    to help them
+                    create and receive orders to and from their suppliers.</p>
+                    <p>I build this application when I didn't have a lot of programming knowledge. It's therefore far from
+                        optimized and contains a lot of bugs. During the last 2 years, I spent at least three to four full
+                        days on site to solve these bugs.
+                    </p>
+                "
+                proofDir="../../assets/img/portfolio/proofs/rushHour/"
+                proofQuant=1
+                proofExtension=".gif"
+                proofAlt="RushHour proof"
+                proofText="
+                    to see a snapshot of the game
+                    or check out the <a class='clickHere' href='https://github.com/MMichotte/RushHour_game'
+                        target='_blank'>GitHub</a> repository.
+                "
+                (newModalEvent)="addModal($event)"
+            ></app-activity>
+
+            <app-activity 
+                title="Covid-19 Masks" 
+                subTitle="3D printing" 
+                coverImg="../../assets/img/portfolio/covid_masks.png" 
+                imgAlt="Covid-19 masks icon" 
+                descriptionBody = "
+                    //TODO
+                "
+                proofDir="../../assets/img/portfolio/proofs/Covid_masks/"
+                proofQuant=2
+                proofExtension=".gif"
+                proofAlt="Covid-19 masks proof"
+                proofText="
+                    to see the proof.
+                "
+                (newModalEvent)="addModal($event)"
+            ></app-activity>
+        </div>
+
+        <div class="row flex-parent">
+            <app-activity 
+                title="DevDay 2020" 
+                subTitle="Conference" 
+                coverImg="../../assets/img/portfolio/devDay.png" 
+                imgAlt="devDay 2020 icon" 
+                descriptionBody = "
+                    //TODO
+                "
+                proofDir="../../assets/img/portfolio/proofs/devDay/"
+                proofQuant=4
+                proofExtension=".png"
+                proofAlt="DevDay 2020 proof"
+                proofText="
+                    to see the proof.
+                "
+                (newModalEvent)="addModal($event)"
+            ></app-activity>
+
+            <app-activity 
+                title="//TODO" 
+                subTitle="" 
+                coverImg="../../assets/img/portfolio/def.png" 
+                imgAlt="//TODO icon" 
+                descriptionBody = "
+                    //TODO
+                "
+                proofDir="../../assets/img/portfolio/proofs/devDay/"
+                proofQuant=1
+                proofExtension=".png"
+                proofAlt="//TODO proof"
+                proofText="
+                    to see the proof.
+                "
+                (newModalEvent)="addModal($event)"
+            ></app-activity>
+
+        </div>
+
+        <app-hours-table></app-hours-table>
+
+    </div>
+
+</div>
+
+<div *ngFor="let modal of modals">
+    <div class="modal fade" id={{modal.id}} tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">{{modal.title}}</h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div [innerHTML]="modal.content"></div>
+                    <h5>Proof :</h5>
+                    <div>Click <span class="clickHere" (click)="displayProof(modal.proof.id)" data-toggle="modal"
+                        [attr.data-target]="'#'+modal.id">here </span> <span [innerHTML]="modal.proof.text"></span></div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="Game" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Rush Hour Game (python)</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>During the first few months of this year, a friend of mine asked me to debug a game he made a few
-                    years ago.
-                    I quickly realized that his code was very badly organized and that understanding his code and
-                    refactoring it
-                    would take me way too much time. Therefore, I decided to "quickly" implement a simple game using a
-                    MVC-architecture
-                    in order to explain to him how things go together and how he should be refactoring his game.
-                </p>
-                <p>After a bit of thinkering, I decided to implement the famous <a
-                        href="https://en.wikipedia.org/wiki/Rush_Hour_(puzzle)" target="_blank">Rush Hour</a>
-                    game in Python. It wasn't without a challenge but I ended up implementing a solid, functional
-                    base-game.
-                    Anyone can very easelly add more levels and submit me a pull-request on GitHub!</p>
-                <h5>Proof :</h5>
-                <div>Click <span class="clickHere" (click)="displayProof('Game')" data-toggle="modal"
-                        data-target="#Game">here</span> to see a snapshot of the game
-                    or check out the <a class="clickHere" href="https://github.com/MMichotte/RushHour_game"
-                        target="_blank">GitHub</a> repository.</div>
-            </div>
+
+<div *ngFor="let modal of modals">
+    <div *ngIf="modal.proof.proofQuant > 1">
+        <div class="proof " id={{modal.proof.id}}>
+            <img src="{{modal.proof.path+slideN+modal.proof.extension}}" alt={{modal.proof.alt}} class="mySlides"
+            (click)="hideProof(modal.proof.id)">
+            <button class="btn btnImg-left" (click)="nextIm(-1,modal.proof.proofQuant)">&#10094;</button>
+            <button class="btn btnImg-right" (click)="nextIm(+1,modal.proof.proofQuant)">&#10095;</button>
         </div>
     </div>
-</div>
-
-<!--------------------------------->
-
-
-<div class="modal fade" id="hoursTable" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 class="modal-title">Hours Table</h2>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <table class="table table-striped table-dark">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Subject</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Hours</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Angular</td>
-                            <td>Online Course</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>NodeJs</td>
-                            <td>Online Course</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Scouts</td>
-                            <td>Team Leadership</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>SLG App</td>
-                            <td>Native app maintenance</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Rush Hour</td>
-                            <td>Python game</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">6</th>
-                            <td>TODO</td>
-                            <td>TODO</td>
-                            <td>10</td>
-                        </tr>
-                        <tr>
-                            <th scope="row"></th>
-                            <td></td>
-                            <td id="totalHours">Total :</td>
-                            <td>60</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+    <div *ngIf="modal.proof.proofQuant == 1">
+        <div class="proof " id={{modal.proof.id}}>
+            <img src="{{modal.proof.path+'0'+modal.proof.extension}}" alt={{modal.proof.alt}} (click)="hideProof(modal.proof.id)">
         </div>
     </div>
 </div>
