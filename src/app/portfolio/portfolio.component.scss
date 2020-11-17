@@ -10,3 +10,47 @@
     align-items: center;
 
 }
+
+.proof{
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    align-content: center;
+
+    img{
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        max-height: 90%;
+    }
+
+    .btn{
+        position: absolute;
+        bottom: 5%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: white;
+
+        &:hover{
+            background-color: var(--myOrange);
+        }
+    }
+
+    .btnImg-left{
+        left: 45%;
+        transform: translate(-45%, 5%);
+    }
+
+    .btnImg-right{
+        left: 55%;
+        transform: translate(-55%, 5%);
+    }
+}

@@ -67,3 +67,12 @@ html, body {
         opacity: 1;
     }
 }
+
+.clickHere{
+    color: var(--myOrange);
+
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}

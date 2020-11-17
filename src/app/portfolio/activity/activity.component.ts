@@ -17,14 +17,19 @@ export class ActivityComponent implements OnInit {
   @Input() descriptionBody: string;
   @Input() proofDir: string;
   @Input() proofAlt: string;
+  @Input() proofQuant: Number;
+  @Input() proofExtension: string;
+  @Input() proofText: string;
 
   @Output() newModalEvent = new EventEmitter<any>();
 
   modal_id: String = "";
+  proof_id: String = "";
 
   constructor() { 
     id ++;
     this.modal_id = `#modal_${id}`;
+    this.proof_id = `proof_${id}`;
   }
 
   ngOnInit(): void {
@@ -32,55 +37,16 @@ export class ActivityComponent implements OnInit {
       id: this.modal_id.substring(1),
       title: this.title,
       content: this.descriptionBody,
+      proof: {
+        id: this.proof_id,
+        path: this.proofDir,
+        proofQuant: this.proofQuant,
+        extension: this.proofExtension,
+        alt: this.proofAlt,
+        text: this.proofText,
+      }
     }
     this.newModalEvent.emit(modal);
-  }
-    
-
-  slideN:number = 0;
-
-  displayProof(p:String){
-    this.slideN = 0;
-    if (p == 'Ang'){
-      document.getElementById("AngularProof").style.display="block";
-    }
-    if (p == 'Node'){
-      document.getElementById("NodeProof").style.display="block";
-    }
-    if (p == 'Scouts'){
-      document.getElementById("ScoutsProof").style.display="block";
-    }
-    if (p == 'SlgApp'){
-      document.getElementById("SlgProof").style.display="block";
-    }
-    if (p == 'Game'){
-      document.getElementById("GameProof").style.display="block";
-    }
-  }
-
-  hideProof(p:String){
-    if (p == 'Ang'){
-      document.getElementById("AngularProof").style.display="none";
-    }
-    if (p == 'Node'){
-      document.getElementById("NodeProof").style.display="none";
-    }
-    if (p == 'Scouts'){
-      document.getElementById("ScoutsProof").style.display="none";
-    }
-    if (p == 'SlgApp'){
-      document.getElementById("SlgProof").style.display="none";
-    }
-    if (p == 'Game'){
-      document.getElementById("GameProof").style.display="none";
-    }
-  }
-
-  nextIm(n:number, imgs:number){
-    let tester = this.slideN + n;
-    if(tester >= 0 && tester < imgs){
-      this.slideN = tester;
-    } 
   }
 
 }

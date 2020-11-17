@@ -12,7 +12,6 @@ export class PortfolioComponent implements OnInit {
   descriptionBody: String = '';
 
   modals: any[] = [];
-  proofs: any[] = [];
 
   constructor() { }
 
@@ -23,11 +22,22 @@ export class PortfolioComponent implements OnInit {
     this.modals.push(m);
   }
 
-  addProof(p: any) {
-    this.proofs.push(p);
+  slideN:number = 0;
+
+  displayProof(id:string){
+    this.slideN = 0;
+    document.getElementById(id).style.display="block";
   }
 
-  displayProof(){
-    console.log('ok');
+  hideProof(id:string){
+    document.getElementById(id).style.display="none";
   }
+
+  nextIm(n:number, imgs:number){
+    let tester = this.slideN + n;
+    if(tester >= 0 && tester < imgs){
+      this.slideN = tester;
+    } 
+  }
+
 }
