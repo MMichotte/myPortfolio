@@ -145,7 +145,7 @@
                     //TODO
                 "
                 proofDir="../../assets/img/portfolio/proofs/Covid_masks/"
-                proofQuant=1
+                proofQuant=2
                 proofExtension=".gif"
                 proofAlt="Covid-19 masks proof"
                 proofText="
@@ -175,17 +175,17 @@
             ></app-activity>
 
             <app-activity 
-                title="Covid-19 Masks" 
-                subTitle="3D printing" 
-                coverImg="../../assets/img/portfolio//TODO.png" 
-                imgAlt="devDay 2020 icon" 
+                title="//TODO" 
+                subTitle="" 
+                coverImg="../../assets/img/portfolio/def.png" 
+                imgAlt="//TODO icon" 
                 descriptionBody = "
                     //TODO
                 "
                 proofDir="../../assets/img/portfolio/proofs/devDay/"
                 proofQuant=1
                 proofExtension=".png"
-                proofAlt="Covid-19 masks proof"
+                proofAlt="//TODO proof"
                 proofText="
                     to see the proof.
                 "
@@ -227,8 +227,8 @@
         <div class="proof " id={{modal.proof.id}}>
             <img src="{{modal.proof.path+slideN+modal.proof.extension}}" alt={{modal.proof.alt}} class="mySlides"
             (click)="hideProof(modal.proof.id)">
-            <button class="btn btnImg-left" (click)="nextIm(-1,2)">&#10094;</button>
-            <button class="btn btnImg-right" (click)="nextIm(+1,2)">&#10095;</button>
+            <button class="btn btnImg-left" (click)="nextIm(-1,modal.proof.proofQuant)">&#10094;</button>
+            <button class="btn btnImg-right" (click)="nextIm(+1,modal.proof.proofQuant)">&#10095;</button>
         </div>
     </div>
     <div *ngIf="modal.proof.proofQuant == 1">
