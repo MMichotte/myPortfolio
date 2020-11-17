@@ -14,6 +14,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HoursTableComponent } from './portfolio/hours-table/hours-table.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     SkillsComponent,
     PortfolioComponent,
     ContactComponent,
+    HoursTableComponent,
   ],
   imports: [
     BrowserModule,

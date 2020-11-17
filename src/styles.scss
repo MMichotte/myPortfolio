@@ -17,8 +17,13 @@ html, body {
     max-width: 100% !important;
     -webkit-text-size-adjust: 100vw !important;
     /*overflow-x: hidden;*/
-    /*overflow-y: hidden;*/
+    overflow-y: scroll;
     
+}
+
+::-webkit-scrollbar {
+    width: 0px;                 /* Remove scrollbar space */
+    background: transparent;    /* Optional: just make scrollbar invisible */
 }
 
 @keyframes fadein {
@@ -65,5 +70,14 @@ html, body {
     .close {
         color: #fff; 
         opacity: 1;
+    }
+}
+
+.clickHere{
+    color: var(--myOrange);
+
+    &:hover{
+        cursor: pointer;
+        text-decoration: underline;
     }
 }
