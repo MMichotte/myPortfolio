@@ -38,6 +38,7 @@ export class PortfolioComponent implements OnInit {
     let tester = this.slideN + n;
     if(tester >= 0 && tester < imgs){
       this.slideN = tester;
+      this.imageLoader = true;
     } 
   }
 
