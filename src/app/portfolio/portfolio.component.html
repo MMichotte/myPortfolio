@@ -165,27 +165,9 @@
                     //TODO
                 "
                 proofDir="../../assets/img/portfolio/proofs/devDay/"
-                proofQuant=4
+                proofQuant=5
                 proofExtension=".png"
                 proofAlt="DevDay 2020 proof"
-                proofText="
-                    to see the proof.
-                "
-                (newModalEvent)="addModal($event)"
-            ></app-activity>
-
-            <app-activity 
-                title="//TODO" 
-                subTitle="" 
-                coverImg="../../assets/img/portfolio/def.png" 
-                imgAlt="//TODO icon" 
-                descriptionBody = "
-                    //TODO
-                "
-                proofDir="../../assets/img/portfolio/proofs/devDay/"
-                proofQuant=1
-                proofExtension=".png"
-                proofAlt="//TODO proof"
                 proofText="
                     to see the proof.
                 "
@@ -225,8 +207,11 @@
 <div *ngFor="let modal of modals">
     <div *ngIf="modal.proof.proofQuant > 1">
         <div class="proof " id={{modal.proof.id}}>
-            <img src="{{modal.proof.path+slideN+modal.proof.extension}}" alt={{modal.proof.alt}} class="mySlides"
-            (click)="hideProof(modal.proof.id)">
+            <div [hidden]="!imageLoader">Loading...</div>
+            <img [hidden]="imageLoader" src="{{modal.proof.path+slideN+modal.proof.extension}}" alt={{modal.proof.alt}} class="mySlides"
+            (click)="hideProof(modal.proof.id)" (load)="imageLoader = false" />   
+            <!--<img src="{{modal.proof.path+slideN+modal.proof.extension}}" alt={{modal.proof.alt}} class="mySlides"
+            (click)="hideProof(modal.proof.id)">-->
             <button class="btn btnImg-left" (click)="nextIm(-1,modal.proof.proofQuant)">&#10094;</button>
             <button class="btn btnImg-right" (click)="nextIm(+1,modal.proof.proofQuant)">&#10095;</button>
         </div>
