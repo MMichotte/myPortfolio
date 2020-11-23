@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
+  imageLoader = true;
   title: String = '';
   descriptionBody: String = '';
 
