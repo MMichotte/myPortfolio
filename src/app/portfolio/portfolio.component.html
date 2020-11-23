@@ -207,9 +207,9 @@
 <div *ngFor="let modal of modals">
     <div *ngIf="modal.proof.proofQuant > 1">
         <div class="proof " id={{modal.proof.id}}>
-            <div [hidden]="!imageLoader">Loading...</div>
+            <div [hidden]="!imageLoader" class="spinner"><app-spinner></app-spinner></div>
             <img [hidden]="imageLoader" src="{{modal.proof.path+slideN+modal.proof.extension}}" alt={{modal.proof.alt}} class="mySlides"
-            (click)="hideProof(modal.proof.id)" (load)="imageLoader = false" />   
+            (click)="hideProof(modal.proof.id)" (load)="imageLoader = false;" />   
             <!--<img src="{{modal.proof.path+slideN+modal.proof.extension}}" alt={{modal.proof.alt}} class="mySlides"
             (click)="hideProof(modal.proof.id)">-->
             <button class="btn btnImg-left" (click)="nextIm(-1,modal.proof.proofQuant)">&#10094;</button>
