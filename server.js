@@ -1,8 +1,11 @@
 //Install express server
 const express = require('express');
+const helmet = require("helmet");
 const path = require('path');
 
 const app = express();
+
+app.use(helmet());
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/myPortfolio'));

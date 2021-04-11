@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+
+  martin-portfolio-app:
+    image: node:14.15.1
+    container_name: martin-portfolio-app
+    restart: unless-stopped
+    volumes:
+      - ./www:/var/www
+    ports:
+      - 8080:8080
+    networks:
+      vps-martin-network:
+        ipv4_address: 192.168.10.10
+    command: bash -c "cd /var/www && npm i express helmet && node ./server"
+
+
+networks:
+  default:
+    external:
+      name: vps-martin-network
+
+  vps-martin-network:
+    external: true
