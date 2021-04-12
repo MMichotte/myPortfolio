@@ -28,7 +28,7 @@ jobs:
         uses: garygrossgarten/github-action-scp@release
         with:
           local: www
-          remote: portfolio
+          remote: portfolio/www
           host: ${{ secrets.VPS_HOST }}
           port: ${{ secrets.VPS_PORT}}
           username: ${{ secrets.VPS_USER }}
