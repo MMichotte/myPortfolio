@@ -6,6 +6,12 @@ const path = require('path');
 const app = express();
 
 app.use(helmet());
+app.use(helmet.contentSecurityPolicy({
+  directives: {
+    ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+    'default-src': ['\'self\'', 'https://mailthis.to']
+  }
+}));
 
 // Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist/myPortfolio'));
